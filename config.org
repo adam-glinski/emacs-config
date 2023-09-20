@@ -156,6 +156,26 @@
   ";" '(:ignore t :wk "util")
   "; c" '(:ignore t :wk "emacs config")
   "; c e" '((lambda () (interactive) (find-file "~/.config/emacs/config.org")) :wk "edit emacs config")
+  "; c r" '(reload-init-file :wk "reload emacs config")
+  )
+
+  ;; TODO: Move later to less "common" mapping
+  (ag/leader
+  "e" '(:ignore t :wk "evaluate")
+  "e b" '(eval-buffer :wk "evaluate elisp in buffer")
+  "e r" '(eval-region :wk "evalulate elisp in region")
+  )
+
+  (ag/leader
+  "f" '(:ignore t :wk "find")
+  "f f" '(find-file :wk "find file")
+  )
+
+  (ag/leader
+  "/" '(comment-line :wk "comment line")
+  ";" '(:ignore t :wk "util")
+  "; c" '(:ignore t :wk "emacs config")
+  "; c e" '((lambda () (interactive) (find-file "~/.config/emacs/config.org")) :wk "edit emacs config")
   ;; "; c r" '(reload-init-file :wk "reload emacs config")
   "; c r" '((lambda () (interactive) (load-file user-init-file :wk "reload emacs config")
    )
